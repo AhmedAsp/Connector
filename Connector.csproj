@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27BF5A78-F1FA-4CD4-8AA1-A1A17BF76CDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Connector</RootNamespace>
+    <AssemblyName>Connector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\frmAmenitiesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAmenitiesManagement.Designer.cs">
+      <DependentUpon>frmAmenitiesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmC2DSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmC2DSettings.Designer.cs">
+      <DependentUpon>frmC2DSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmFacilitiesManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmFacilitiesManagment.Designer.cs">
+      <DependentUpon>frmFacilitiesManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amenities\frmAmenitiesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amenities\frmAmenitiesManagement.Designer.cs">
+      <DependentUpon>frmAmenitiesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Amenities.cs" />
+    <Compile Include="DAL\AmenitiesOfUnits.cs" />
+    <Compile Include="DAL\AmenitiesType.cs" />
+    <Compile Include="DAL\Facilities.cs" />
+    <Compile Include="DAL\FacilitiesType.cs" />
+    <Compile Include="DAL\Floors.cs" />
+    <Compile Include="DAL\Status.cs" />
+    <Compile Include="DAL\Pictures.cs" />
+    <Compile Include="DAL\Reservations.cs" />
+    <Compile Include="DAL\UniteDetails.cs" />
+    <Compile Include="DAL\Unites.cs" />
+    <Compile Include="DAL\UniteType.cs" />
+    <Compile Include="Facilities\frmFacilitiesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facilities\frmFacilitiesManagement.Designer.cs">
+      <DependentUpon>frmFacilitiesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnectCitey2Day.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectCitey2Day.Designer.cs">
+      <DependentUpon>frmConnectCitey2Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Users.cs" />
+    <Compile Include="DataLayer\DBGate.cs" />
+    <Compile Include="DataLayer\DBHelper.cs" />
+    <Compile Include="frmDone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDone.Designer.cs">
+      <DependentUpon>frmDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmFrontOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmFrontOffice.Designer.cs">
+      <DependentUpon>frmFrontOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmPrintReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmPrintReservation.Designer.cs">
+      <DependentUpon>frmPrintReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmReservations.Designer.cs">
+      <DependentUpon>frmReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DBGate.cs" />
+    <Compile Include="DAL\GetData.cs" />
+    <Compile Include="DAL\Products.cs" />
+    <Compile Include="Reception\frmOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmOffers.Designer.cs">
+      <DependentUpon>frmOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelPictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotelPictures.Designer.cs">
+      <DependentUpon>HotelPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL\SendData.cs" />
+    <Compile Include="Unites\frmFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmFloors.Designer.cs">
+      <DependentUpon>frmFloors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmRateAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmRateAvailability.Designer.cs">
+      <DependentUpon>frmRateAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmShowUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmShowUnit.Designer.cs">
+      <DependentUpon>frmShowUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmUnitesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmUnitesDetails.Designer.cs">
+      <DependentUpon>frmUnitesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\frmGroupPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\frmGroupPermission.Designer.cs">
+      <DependentUpon>frmGroupPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\frmGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\frmGroups.Designer.cs">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser\frmUserType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUser\frmUserType.Designer.cs">
+      <DependentUpon>frmUserType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmUnits.Designer.cs">
+      <DependentUpon>frmUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmUnitType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmUnitType.Designer.cs">
+      <DependentUpon>frmUnitType.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\frmAmenitiesManagement.resx">
+      <DependentUpon>frmAmenitiesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmC2DSettings.resx">
+      <DependentUpon>frmC2DSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmFacilitiesManagment.resx">
+      <DependentUpon>frmFacilitiesManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amenities\frmAmenitiesManagement.resx">
+      <DependentUpon>frmAmenitiesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facilities\frmFacilitiesManagement.resx">
+      <DependentUpon>frmFacilitiesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnectCitey2Day.resx">
+      <DependentUpon>frmConnectCitey2Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDone.resx">
+      <DependentUpon>frmDone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmFrontOffice.resx">
+      <DependentUpon>frmFrontOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmPrintReservation.resx">
+      <DependentUpon>frmPrintReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmReservations.resx">
+      <DependentUpon>frmReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmOffers.resx">
+      <DependentUpon>frmOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelPictures.resx">
+      <DependentUpon>HotelPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Unites\frmFloors.resx">
+      <DependentUpon>frmFloors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmRateAvailability.resx">
+      <DependentUpon>frmRateAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmShowUnit.resx">
+      <DependentUpon>frmShowUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmUnitesDetails.resx">
+      <DependentUpon>frmUnitesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\frmGroupPermission.resx">
+      <DependentUpon>frmGroupPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\frmGroups.resx">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUser\frmUserType.resx">
+      <DependentUpon>frmUserType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmUnits.resx">
+      <DependentUpon>frmUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmUnitType.resx">
+      <DependentUpon>frmUnitType.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="img\small_icons\OurLogo.psd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\HdBg1.jpg" />
+    <None Include="img\Arrivals_blueS.png" />
+    <None Include="img\flightSchedule_blue.png" />
+    <None Include="img\flightStatus_blue.png" />
+    <None Include="img\Arrivals_blue.png" />
+    <None Include="img\Departures_blue.png" />
+    <Content Include="img\MyLogoSmlleBag - Copy.png" />
+    <None Include="img\redlogin.png" />
+    <Content Include="img\small_icons\1bed.png" />
+    <Content Include="img\small_icons\2bed.png" />
+    <Content Include="img\small_icons\add%402x.png" />
+    <Content Include="img\small_icons\add.png" />
+    <Content Include="img\small_icons\close_icon%402x.png" />
+    <Content Include="img\small_icons\close_icon.png" />
+    <Content Include="img\small_icons\confused.png" />
+    <Content Include="img\small_icons\download2%402x.png" />
+    <Content Include="img\small_icons\download2.png" />
+    <Content Include="img\small_icons\download_icon%402x.png" />
+    <Content Include="img\small_icons\download_icon.png" />
+    <Content Include="img\small_icons\email%402x.png" />
+    <Content Include="img\small_icons\email.png" />
+    <Content Include="img\small_icons\error_icon%402x.png" />
+    <Content Include="img\small_icons\error_icon.png" />
+    <Content Include="img\small_icons\ex_link%402x.png" />
+    <Content Include="img\small_icons\ex_link.png" />
+    <Content Include="img\small_icons\facebook-icon.png" />
+    <Content Include="img\small_icons\happy.png" />
+    <Content Include="img\small_icons\heart2%402x.png" />
+    <Content Include="img\small_icons\heart2.png" />
+    <Content Include="img\small_icons\heart_icon%402x.png" />
+    <Content Include="img\small_icons\heart_icon.png" />
+    <Content Include="img\small_icons\in-love.png" />
+    <Content Include="img\small_icons\info_icon%402x.png" />
+    <Content Include="img\small_icons\info_icon.png" />
+    <Content Include="img\small_icons\Instagram-icon.png" />
+    <Content Include="img\small_icons\link%402x.png" />
+    <Content Include="img\small_icons\link.png" />
+    <Content Include="img\small_icons\moreinfo%402x.png" />
+    <Content Include="img\small_icons\moreinfo.png" />
+    <Content Include="img\small_icons\note_icon%402x.png" />
+    <Content Include="img\small_icons\note_icon.gif" />
+    <Content Include="img\small_icons\phone%402x.png" />
+    <Content Include="img\small_icons\phone.png" />
+    <Content Include="img\small_icons\printer%402x.png" />
+    <Content Include="img\small_icons\printer.png" />
+    <Content Include="img\small_icons\rss_icon%402x.png" />
+    <Content Include="img\small_icons\rss_icon.png" />
+    <Content Include="img\small_icons\sad.png" />
+    <Content Include="img\small_icons\smiling.png" />
+    <Content Include="img\small_icons\star3%402x.png" />
+    <Content Include="img\small_icons\star3.png" />
+    <Content Include="img\small_icons\star_icon%402x.png" />
+    <Content Include="img\small_icons\star_icon.png" />
+    <Content Include="img\small_icons\twitter%402x.png" />
+    <Content Include="img\small_icons\Twitter-icon.png" />
+    <Content Include="img\small_icons\twitter.png" />
+    <Content Include="img\small_icons\twitter_icon%402x.png" />
+    <Content Include="img\small_icons\twitter_icon.png" />
+    <Content Include="img\small_icons\users %282%29.ico" />
+    <Content Include="img\small_icons\users.ico" />
+    <Content Include="img\small_icons\users.png" />
+    <Content Include="img\small_icons\user_group.png" />
+    <Content Include="img\small_icons\warning_icon%402x.png" />
+    <Content Include="img\small_icons\warning_icon.png" />
+    <Content Include="img\small_icons\youtube-icon.png" />
+    <Content Include="img\sw2.JPG" />
+    <None Include="Resources\ip_icon_03_PrintOk.png" />
+    <None Include="Resources\Exit3.jpg" />
+    <None Include="Resources\log3.jpg" />
+    <None Include="Resources\t.JPG" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
