@@ -78,15 +78,21 @@
     <Compile Include="DAL\Amenities.cs" />
     <Compile Include="DAL\AmenitiesOfUnits.cs" />
     <Compile Include="DAL\AmenitiesType.cs" />
+    <Compile Include="DAL\Company.cs" />
     <Compile Include="DAL\Facilities.cs" />
     <Compile Include="DAL\FacilitiesType.cs" />
     <Compile Include="DAL\Floors.cs" />
+    <Compile Include="DAL\Group.cs" />
+    <Compile Include="DAL\MealSystem.cs" />
+    <Compile Include="DAL\PriceType.cs" />
+    <Compile Include="DAL\SpecialRequests.cs" />
     <Compile Include="DAL\Status.cs" />
     <Compile Include="DAL\Pictures.cs" />
     <Compile Include="DAL\Reservations.cs" />
     <Compile Include="DAL\UniteDetails.cs" />
     <Compile Include="DAL\Unites.cs" />
     <Compile Include="DAL\UniteType.cs" />
+    <Compile Include="DAL\UnitTypePrice.cs" />
     <Compile Include="Facilities\frmFacilitiesManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +126,11 @@
     <Compile Include="Reception\frmPrintReservation.Designer.cs">
       <DependentUpon>frmPrintReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reception\frmReservations.cs">
+    <Compile Include="Reception\frmReservationsList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reception\frmReservations.Designer.cs">
-      <DependentUpon>frmReservations.cs</DependentUpon>
+    <Compile Include="Reception\frmReservationsList.Designer.cs">
+      <DependentUpon>frmReservationsList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -150,11 +156,41 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAL\SendData.cs" />
+    <Compile Include="Reception\frmManagmentReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmManagmentReservations.Designer.cs">
+      <DependentUpon>frmManagmentReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Unites\frmFloors.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Unites\frmFloors.Designer.cs">
       <DependentUpon>frmFloors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmGroup.Designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmMealSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmMealSystem.Designer.cs">
+      <DependentUpon>frmMealSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmPriceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmPriceType.Designer.cs">
+      <DependentUpon>frmPriceType.cs</DependentUpon>
     </Compile>
     <Compile Include="Unites\frmRateAvailability.cs">
       <SubType>Form</SubType>
@@ -167,6 +203,12 @@
     </Compile>
     <Compile Include="Unites\frmShowUnit.Designer.cs">
       <DependentUpon>frmShowUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unites\frmSpecialRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unites\frmSpecialRequests.Designer.cs">
+      <DependentUpon>frmSpecialRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="Unites\frmUnitesDetails.cs">
       <SubType>Form</SubType>
@@ -243,8 +285,8 @@
     <EmbeddedResource Include="Reception\frmPrintReservation.resx">
       <DependentUpon>frmPrintReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reception\frmReservations.resx">
-      <DependentUpon>frmReservations.cs</DependentUpon>
+    <EmbeddedResource Include="Reception\frmReservationsList.resx">
+      <DependentUpon>frmReservationsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -265,14 +307,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reception\frmManagmentReservations.resx">
+      <DependentUpon>frmManagmentReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Unites\frmFloors.resx">
       <DependentUpon>frmFloors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmMealSystem.resx">
+      <DependentUpon>frmMealSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmPriceType.resx">
+      <DependentUpon>frmPriceType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unites\frmRateAvailability.resx">
       <DependentUpon>frmRateAvailability.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unites\frmShowUnit.resx">
       <DependentUpon>frmShowUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unites\frmSpecialRequests.resx">
+      <DependentUpon>frmSpecialRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unites\frmUnitesDetails.resx">
       <DependentUpon>frmUnitesDetails.cs</DependentUpon>

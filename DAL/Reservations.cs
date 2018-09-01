@@ -274,6 +274,7 @@ namespace Connector.DAL
             finally { Connection.Close(); }
             return lst;
         }
+        // Reservation Frm
         public List<Reservations> Search( string SerachKey , DateTime _from , DateTime _to)
         {
             SqlConnection Connection = DBGate.GetConnection();
@@ -313,5 +314,49 @@ namespace Connector.DAL
             finally { Connection.Close(); }
             return lst;
         }
+        // FrontOffice Frm
+        public List<Reservations> Search(DateTime _CheckOut )
+        {
+            SqlConnection Connection = DBGate.GetConnection();
+            string SelectAll = " select * from Reservations where CheckOut >= @Out   ";
+            SqlCommand cmd = new SqlCommand(SelectAll, Connection);
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@Out", _CheckOut);
+             List<Reservations> lst = new List<Reservations>();
+            try
+            {
+                Connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Reservations _obj = new Reservations();
+                    _obj.ID = int.Parse(reader["ID"].ToString());
+                    _obj.FirstName = reader["FirstName"].ToString();
+                    _obj.LastName = reader["LastName"].ToString();
+                    _obj.Mobile = reader["Mobile"].ToString();
+                    _obj.UniteName = reader["UniteName"].ToString();
+                    //
+                    _obj.CheckIn = DateTime.Parse(reader["CheckIn"].ToString());
+                    _obj.CheckOut = DateTime.Parse(reader["CheckOut"].ToString());
+                    _obj.Bookedon = DateTime.Parse(reader["Bookedon"].ToString());
+                    _obj.Status = reader["Status"].ToString();
+                    _obj.Days = int.Parse(reader["Days"].ToString());
+                    //
+                    _obj.TotalPrice = double.Parse(reader["TotalPrice"].ToString());
+                    _obj.Commission = double.Parse(reader["Commission"].ToString());
+                    _obj.RoomNo = reader["RoomNo"].ToString();
+                    lst.Add(_obj);
+                }
+            }
+            catch (SqlException ex)
+            {
+                frmDone frmerror = new frmDone(ex.ToString());
+                frmerror.ShowDialog();
+            }
+            finally { Connection.Close(); }
+            return lst;
+        }
+
+
     }
 }

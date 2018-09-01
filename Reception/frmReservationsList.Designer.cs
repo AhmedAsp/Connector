@@ -1,6 +1,6 @@
 ﻿namespace Connector
 {
-    partial class frmReservations
+    partial class frmReservationsList
     {
         /// <summary>
         /// Required designer variable.

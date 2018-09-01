@@ -47,19 +47,15 @@ namespace Connector
             _frm.Show();
         }
 
-        #region Hotel
+        #region Reciptions
         private void TSMFrontOffice_Click(object sender, EventArgs e)
         {
             frmFrontOffice frm = new frmFrontOffice();
             openforminpanal(frm);
         }
-        private void TSMGeneralReports_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void TSMReservations_Click(object sender, EventArgs e)
         {
-            frmReservations frm = new frmReservations();
+            frmReservationsList frm = new frmReservationsList();
             OpenForm(frm);
         }
         private void TSMRateAvailability_Click(object sender, EventArgs e)
@@ -72,11 +68,9 @@ namespace Connector
             frmOffers frm = new frmOffers();
             OpenForm(frm);
         }
-        private void TSMRoomsProperty_Click(object sender, EventArgs e)
-        {
-            Rooms.frmUnitesDetails frm = new Rooms.frmUnitesDetails();
-            OpenForm(frm);
-        }
+        #endregion
+
+        #region Units
         private void TSMfloors_Click(object sender, EventArgs e)
         {
             Unites.frmFloors frm = new Unites.frmFloors();
@@ -92,17 +86,11 @@ namespace Connector
             Unites.frmUnits frm = new Unites.frmUnits();
             OpenForm(frm);
         }
-        #endregion
-
-        #region Facilities
-        private void TSMHotelFacilities_Click(object sender, EventArgs e)
+        private void TSMRoomsProperty_Click(object sender, EventArgs e)
         {
-            Facilities.frmFacilitiesManagement frm = new Facilities.frmFacilitiesManagement();
+            Rooms.frmUnitesDetails frm = new Rooms.frmUnitesDetails();
             OpenForm(frm);
         }
-        #endregion
-
-        #region Amenities
         private void TSMRoomAmenities_Click(object sender, EventArgs e)
         {
             Amenities.frmAmenitiesManagement frm = new Amenities.frmAmenitiesManagement();
@@ -133,11 +121,52 @@ namespace Connector
         }
         #endregion
 
+        #region System
+        private void TSMHotelFacilities_Click(object sender, EventArgs e)
+        {
+            Facilities.frmFacilitiesManagement frm = new Facilities.frmFacilitiesManagement();
+            OpenForm(frm);
+        }
+        private void TSMCompany_Click(object sender, EventArgs e)
+        {
+            Unites.frmCompany frm = new Unites.frmCompany();
+            OpenForm(frm);
+        }
+        private void TSMGroup_Click(object sender, EventArgs e)
+        {
+            Unites.frmGroup frm = new Unites.frmGroup();
+            OpenForm(frm);
+        }
+        private void TSMMealSystem_Click(object sender, EventArgs e)
+        {
+            Unites.frmMealSystem frm = new Unites.frmMealSystem();
+            OpenForm(frm);
+        }
+        private void TSMSpecialRequests_Click(object sender, EventArgs e)
+        {
+            Unites.frmSpecialRequests frm = new Unites.frmSpecialRequests();
+            OpenForm(frm);
+
+        }
+        private void priceTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Unites.frmPriceType frm = new Unites.frmPriceType();
+            OpenForm(frm);
+
+        }
+        #endregion
+
+        private void TSMGeneralReports_Click(object sender, EventArgs e)
+        {
+
+        }
         private void Exite(object sender, EventArgs e)
         {
             Application.Exit();
 
         }
+
+        
 
         
 

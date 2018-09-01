@@ -14,7 +14,7 @@ using System.Data.Sql;
 
 namespace Connector
 {
-    public partial class frmReservations : Form
+    public partial class frmReservationsList : Form
     {
         SendData SendObj = new SendData();
         //
@@ -26,7 +26,7 @@ namespace Connector
         frmDone frm = new frmDone("Please Select Room No");
         frmDone _frm = new frmDone("Print Form");
         //
-        public frmReservations()
+        public frmReservationsList()
         {
             InitializeComponent();
             timer1.Tick += new EventHandler(SendData);

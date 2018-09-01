@@ -165,7 +165,5 @@ namespace Connector.DAL
             finally { Connection.Close(); }
             return lst;
         }
-
-
     }
 }
